@@ -14,7 +14,7 @@ st.markdown("<h1 style='text-align: center;'>Agronomist - Information assistant<
 
 # Set org ID and API key
 #openai.organization = "<YOUR_OPENAI_ORG_ID>"
-openai.api_key = "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"
+openai.api_key = "sk-"
 
 # Initialise session state variables
 if 'generated' not in st.session_state:
