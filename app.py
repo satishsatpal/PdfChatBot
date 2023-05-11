@@ -61,24 +61,6 @@ if clear_button:
     st.session_state['total_tokens'] = []
     counter_placeholder.write(f"Total cost of this conversation: ${st.session_state['total_cost']:.5f}")
 
-def sidebar_bg(side_bg):
-
-   side_bg_ext = 'png'
-
-   st.markdown(
-      f"""
-      <style>
-      [data-testid="stSidebar"] > div:first-child {{
-          background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
-      }}
-      </style>
-      """,
-      unsafe_allow_html=True,
-      )
-#st.markdown(page_bg_img, unsafe_allow_html=True)
-
-
-
 # generate a response
 def generate_response(prompt):
     st.session_state['messages'].append({"role": "user", "content": prompt})
@@ -131,10 +113,10 @@ if st.session_state['generated']:
 
 
             try:
-                connection = mysql.connector.connect(host='192.168.2.13',
-                                  database='kidneyapp',
-                                  user='Kidney',
-                                  password='Kidney@123',use_pure=True)
+                connection = mysql.connector.connect(host='IP Adress',
+                                  database='Name of database',
+                                  user='user name',
+                                  password='password',use_pure=True)
 
                 if connection.is_connected():
 
